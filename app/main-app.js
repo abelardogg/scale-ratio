@@ -1,10 +1,15 @@
 jQuery(function (){
 //start
 var $widthInputValue, $multiplerInputValue, $heightInputValue;
-
+var $modeButtons = {};
   $(document).ready(function(){
-
-
+    $groupModeButtons = $('#groupModeButtons button');
+    console.log();
+    for (var i = 0; i < $groupModeButtons.length; i++) {
+      $modeButtons[i] = {'id' : $groupModeButtons.eq(i).attr('id'),
+                          'classes' : $groupModeButtons.eq(i).attr('class') }
+    }
+    console.log($modeButtons);
   });
   $('#width-input').keyup(function(){
     $widthInputValue = parseFloat($(this).val());
