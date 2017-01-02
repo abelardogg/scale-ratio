@@ -44,6 +44,9 @@ console.log($focusInput);
       greenLog('yes this is the actual focus,  nothing to do here');
     }
   }
+  $('#multipler-input').keyup(function(){
+    $targetInput.val($(this).val()*($focusInput.val()/100))
+  });
 
 
 //end
