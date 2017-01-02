@@ -45,7 +45,7 @@ console.log($focusInput);
     }
   }
   $('#multipler-input').keyup(function(){
-    $targetInput.val($(this).val()*($focusInput.val()/100))
+    $targetInput.val($(this).val()*($focusInput.val()/100));
   });
 
 
