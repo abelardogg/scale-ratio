@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scale-Ratio</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="my-css/main-css.css">
   </head>
   <body>
     <div class="container">
@@ -25,14 +26,14 @@
       <div class="col-xs-4">
         <div class="input-group">
           <span class="input-group-addon" id="basic-addon1">width:</span>
-          <input id="width-input" type="text" class="form-control" placeholder="ex. 500, 200, 1080">
+          <input id="width-input" value="300" type="text" class="form-control" placeholder="ex. 500, 200, 1080">
         </div>
       </div>
 
       <div class="col-xs-4">
         <div class="input-group">
           <span class="input-group-addon" id="basic-addon1">multipler:</span>
-          <input id="multipler-input" value="0" type="text" class="form-control" placeholder="ex. 10, 20, 50">
+          <input id="multipler-input" value="50" type="text" class="form-control" placeholder="ex. 10, 20, 50">
           <span class="input-group-addon" id="basic-addon1">%</span>
         </div>
       </div>
@@ -44,6 +45,11 @@
         </div>
       </div>
     </div>
+<br>
+    <div id="shape-area">
+      <canvas id="myCanvas" width="300" height="150">
+Your browser does not support the HTML5 canvas tag.</canvas>
+    </div>
 
   </div>
   <!-- assets -->
@@ -54,6 +60,8 @@
     <script src="app/main-app.js"></script>
     <script src="app/modes/pixel-mode.js"></script>
     <script src="app/modes/percentage-mode.js"></script>
+    <script src="app/shape/square.js"></script>
+
 
 
   </body>
