@@ -35,28 +35,37 @@ var $measureButton=$('#measure-mode'), $percentageButton=$('#percentage-mode');
     activePercentage();
   });
 
+  function activeButton($buttonId, $activeButtonColor){
+    console.log('active button')
+    $buttonId.addClass($activeButtonColor);
+    $buttonId.removeClass('btn-default');
+  }
+
+  function deactivateSpecificButton($buttonId, $activeButtonColor){
+    console.log('deactivate button')
+    $buttonId.addClass('btn-default');
+    $buttonId.removeClass($activeButtonColor);
+  }
+
   function activePixels(){
     if($currentMode != 'pixel'){
       console.log('turning ON pixel: '+$currentMode);
-      $measureButton.addClass('btn-info');
-      $percentageButton.removeClass('btn-info');
+      activeButton($measureButton, 'btn-info');
+      deactivateSpecificButton($percentageButton, 'btn-info');
       $currentMode = 'pixel';
       console.log('currentMode: '+$currentMode);
-
     } else{
       alert('pixels are already active');
-
     }
   }
 
   function activePercentage(){
     if($currentMode != 'percentage'){
       console.log('turning ON percentage: '+$currentMode);
-      $percentageButton.addClass('btn-info');
-      $measureButton.removeClass('btn-info');
+      activeButton($percentageButton, 'btn-info');
+      deactivateSpecificButton($measureButton, 'btn-info');
       $currentMode = 'percentage';
       console.log('currentMode: '+$currentMode);
-
     } else{
       alert('percentage are already active');
     }
