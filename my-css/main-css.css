@@ -6,3 +6,12 @@ canvas {
     display: block;
     border:5px solid #d3d3d3;
 }
+
+#square{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border:5px solid #d3d3d3;
+}

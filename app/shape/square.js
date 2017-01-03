@@ -12,12 +12,20 @@ $shapeSquare = $('#square');
     setMeasures()
   });
   $('#multipler-input').keyup(function(){
-    setMeasures()  
+    setMeasures()
   });
 
   function setMeasures(){
-    $shapeSquare.attr('width', $('#width-input').val());
-    $shapeSquare.attr('height', $('#height-input').val());
+    var x = $('#width-input').val();
+    var y = $('#height-input').val();
+    // $shapeSquare.css('width', x);
+    // $shapeSquare.css('height', y);
+    $("#square")
+      .animate({
+            height: y,
+            width: x
+      });
+
   }
 
 //end
