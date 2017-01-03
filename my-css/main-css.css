@@ -1,3 +1,10 @@
+body{
+  margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding: 0;
+}
 canvas {
     padding-left: 0;
     padding-right: 0;
@@ -14,4 +21,9 @@ canvas {
     margin-right: auto;
     display: block;
     border:5px solid #d3d3d3;
+}
+#introduction-text{
+  margin-top: -20px;
+  background: linear-gradient(#47BFFF, white);
+  color: white;
 }
