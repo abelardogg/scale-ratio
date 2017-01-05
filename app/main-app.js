@@ -9,10 +9,12 @@ var $measureButton=$('#measure-mode'), $percentageButton=$('#percentage-mode');
 
   $('#measure-mode').on('click', function(){
     activePixels();
+    activateInput('#multipler-input');
   });
 
   $('#percentage-mode').on('click', function(){
     activePercentage();
+    deactivateInput('#multipler-input');
   });
 
   function activeButton($buttonId, $activeButtonColor){
@@ -23,6 +25,14 @@ var $measureButton=$('#measure-mode'), $percentageButton=$('#percentage-mode');
   function deactivateSpecificButton($buttonId, $activeButtonColor){
     $buttonId.addClass('btn-default');
     $buttonId.removeClass($activeButtonColor);
+  }
+
+  function activateInput(inputId){
+    $(inputId).removeAttr('disabled');
+  }
+
+  function deactivateInput(inputId){
+    $(inputId).attr('disabled','');
   }
 
   function activePixels(){

@@ -27,3 +27,5 @@ canvas {
   background: linear-gradient(#47BFFF, white);
   color: white;
 }
+
+.normal-size-button{width: 100px}
